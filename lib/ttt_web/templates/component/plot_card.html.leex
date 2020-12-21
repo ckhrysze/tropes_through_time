@@ -1,0 +1,19 @@
+<%= if @card do %>
+  <div class="bg-black p-2 rounded">
+    <div class="bg-red-900 p-2">
+      <div class="text-gray-100">
+        <%= @card.title %>
+      </div>
+      <div class="text-blue-300 text-xs">
+        <%= @card.genres |> Enum.join(", ") %>
+      </div>
+      <div class="text-yellow-300 text-xs">
+          <%= for role <- @card.cast do %>
+            <div>
+              <%= role %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

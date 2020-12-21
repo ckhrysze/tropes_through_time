@@ -1,0 +1,22 @@
+<%= if is_nil(@player) do %>
+<div class="">
+  No player yet
+</div>
+
+<% else %>
+
+<div class="">
+  <div>
+    <%= @player.name %>
+  </div>
+  <div class="flex">
+    <%= for card <- @player.cards do %>
+      <%= if card.type == :character do %>
+        <%= render Ttt.ComponentView, "character_card.html", card: card, show_played: true %>
+      <% else %>
+        <%= render Ttt.ComponentView, "modifier_card.html", card: card, show_played: true %>
+      <% end %>
+  <% end %>
+  </div>
+</div>
+<% end %>

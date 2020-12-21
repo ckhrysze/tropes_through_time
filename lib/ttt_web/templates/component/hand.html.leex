@@ -1,0 +1,11 @@
+<div class="absolute inset-x-0 bottom-0 h-64 w-screen bg-gray-500">
+  <div class="flex space-x-4 p-4">
+  <%= for card <- @hand do %>
+    <%= if card.type == :character do %>
+      <%= render Ttt.ComponentView, "character_card.html", card: card, show_played: false %>
+    <% else %>
+      <%= render Ttt.ComponentView, "modifier_card.html", card: card, show_played: false %>
+    <% end %>
+  <% end %>
+  </div>
+</div>

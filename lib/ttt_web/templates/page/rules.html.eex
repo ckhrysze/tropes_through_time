@@ -1,0 +1,24 @@
+<div class="bg-gray-700 w-screen h-screen">
+  <div class="text-center text-white p-4 bg-black h-screen w-1/2 mx-auto rounded-lg">
+    <div class="bg-red-900 rounded-lg">
+      <div class="pb-8">
+        <span class="text-4xl">Tropes through Time</span>
+      </div>
+      <div class="text-left flex flex-col space-y-4 p-2 text-sm">
+        <p>Welcome to 'Tropes through Time', a card game centered around common media tropes!</p>
+        <p>
+          An eccentric director is responsible for creating an episode of 'Tropes through Time', a time traveling soap opera, and likes
+          to re-cast characters for each episode. Each player represents a casting agent whose success is dependant on the ratings they
+          can produce with their casting choices each week. The player who boosting ratings the most wins!
+        </p>
+        <p>
+          Game play consists of a number of rounds. Each round begins by revealing the plot card this week's episode will cast against.
+          Players will then take 5 turns each. For the first two turns, the player may play a character card. Characters need to have
+          at least 1 common genre with the plot, and have at least 1 common and unclaimed role with the plot. For the remaining 3 turns,
+          the player may play a motif card. Motif cards are rule breaking, so their text supercedes other rules. At the end of these 5
+          turns, rating are calculated and awarded to each player.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

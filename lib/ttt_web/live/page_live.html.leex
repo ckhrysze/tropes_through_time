@@ -1,0 +1,50 @@
+<div class="flex">
+
+  <div class="flex-1">
+    <div class="flex flex-col">
+      <div class="flex-1">
+        <%= render Ttt.ComponentView, "player.html", player: @player1 %>
+      </div>
+      <div class="flex-1">
+        <%= render Ttt.ComponentView, "player.html", player: @player3 %>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <div class="flex">
+      <%= render Ttt.ComponentView, "plot_card.html", card: @plot_card %>
+    </div>
+  </div>
+
+  <div class="flex-1">
+    <div class="flex flex-col">
+      <div class="flex-1">
+        <%= render Ttt.ComponentView, "player.html", player: @player2 %>
+      </div>
+      <div class="flex-1">
+        <%= render Ttt.ComponentView, "player.html", player: @player4 %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= if @role == "player" do %>
+  <%= render Ttt.ComponentView, "hand.html", hand: @hand %>
+<% end %>
+
+<%= if @role == "gm" do %>
+  <%= render Ttt.ComponentView, "controls.html", %{} %>
+<% else %>
+  <%= render Ttt.ComponentView, "winnie.html", %{} %>
+<% end %>
+
+
+<%= if is_nil(@role) do %>
+  <%= render Ttt.ComponentView, "role_form.html", assigns %>
+<% end %>
+
+<%= if @show_board do %>
+  <%= render Ttt.ComponentView, "leaderboard.html", assigns %>
+<% end %>

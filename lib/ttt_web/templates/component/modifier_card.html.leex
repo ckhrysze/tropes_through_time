@@ -1,0 +1,16 @@
+<%= if @card.played != @show_played do %>
+<div class="hidden"></div>
+<% else %>
+<div class="flex-1 bg-black p-2 rounded max-w-xs" phx-click="toggle-card" phx-value-title="<%= @card.title %>">
+  <div class="p-2 bg-purple-700 min-h-full">
+    <div class="text-gray-100">
+      <%= @card.title %>
+    </div>
+
+    <div class="text-green-300 text-xs">
+      <%= @card.rules %>
+    </div>
+
+  </div>
+</div>
+<% end %>
